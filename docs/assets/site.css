@@ -202,9 +202,6 @@
   }
 }
 @layer utilities {
-  .relative {
-    position: relative;
-  }
   .static {
     position: static;
   }
@@ -698,6 +695,12 @@ p {
   align-items: center;
   padding: 27px 0;
   border-bottom: 1px solid rgba(255,255,255,.3);
+  transition: background-color .2s,padding .2s;
+}
+.event-row:hover {
+  background: rgba(255,255,255,.06);
+  padding-left: 14px;
+  padding-right: 14px;
 }
 .event-row time {
   display: flex;
@@ -725,12 +728,18 @@ p {
   font-size: 13px;
   color: #cbd0e9;
 }
-.event-row>a {
+.event-row-arrow {
   width: 44px;
   height: 44px;
   border: 1px solid rgba(255,255,255,.5);
   display: grid;
   place-items: center;
+  transition: background-color .2s,color .2s;
+}
+.event-row:hover .event-row-arrow {
+  background: var(--acid);
+  color: var(--night);
+  border-color: var(--acid);
 }
 .join {
   display: flex;

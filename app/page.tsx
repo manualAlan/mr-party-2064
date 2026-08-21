@@ -98,11 +98,11 @@ export default function Home() {
               <Link className="text-link light-link" href="/events">View all events <ArrowIcon /></Link>
             </div>
             <div className="event-list">
-              {events.map((event) => <article className="event-row" key={event.title}>
+              {events.map((event) => <Link className="event-row" href={`/events?event=${event.slug}#register`} aria-label={`Register for ${event.title}`} key={event.title}>
                 <time><strong>{event.day}</strong><span>{event.month}</span></time>
                 <div><p>{event.type}</p><h3>{event.title}</h3><span>{event.place}</span></div>
-                <Link href={`/events?focus=${event.slug}#${event.slug}`} aria-label={`Details for ${event.title}`}><ArrowIcon /></Link>
-              </article>)}
+                <span className="event-row-arrow" aria-hidden="true"><ArrowIcon /></span>
+              </Link>)}
             </div>
           </div>
         </section>
