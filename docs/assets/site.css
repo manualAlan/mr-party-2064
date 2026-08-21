@@ -3346,3 +3346,94 @@ body:after {
     animation: none;
   }
 }
+.hero-copy:before,.hero-copy:after,.hero h1:before {
+  display: none;
+}
+.priority-card p {
+  padding-right: 50px;
+  margin-bottom: 58px;
+}
+.priority-card>a {
+  z-index: 4;
+}
+.signal-panel:after {
+  right: 26px;
+  bottom: 24px;
+}
+.register-form:after {
+  top: 17px;
+  right: 22px;
+}
+.candidate-tag {
+  max-width: 270px;
+}
+.event-row-arrow {
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+}
+@media (min-width:601px) and (max-width:900px) {
+  .hero h1 {
+    font-size: clamp(62px,9.2vw,72px);
+    max-width: 72%;
+  }
+  .hero-dek {
+    font-size: 20px;
+    max-width: 52%;
+  }
+  .hero-portrait {
+    width: 430px;
+    right: -5vw;
+  }
+  .button-row {
+    gap: 24px;
+  }
+  .button {
+    min-width: 190px;
+  }
+  .priority-card {
+    min-height: 475px;
+  }
+  .priority-card p {
+    padding-right: 54px;
+  }
+  .candidate-tag {
+    right: 5vw;
+  }
+}
+@media (max-width:600px) {
+  .hero-copy {
+    padding-top: 48px;
+  }
+  .hero-copy .eyebrow {
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    margin-bottom: 26px;
+  }
+  .hero-dek {
+    position: relative;
+    z-index: 5;
+  }
+  .priority-card p {
+    padding-right: 45px;
+    margin-bottom: 55px;
+  }
+  .signal-panel:after,.register-form:after {
+    display: none;
+  }
+  .candidate-tag {
+    right: 24vw;
+    max-width: 185px;
+  }
+  .page-hero .wrap {
+    padding-top: 20px;
+  }
+  .page-hero h1 {
+    font-size: clamp(49px,14vw,58px);
+    overflow-wrap: normal;
+  }
+  .event-detail {
+    padding-inline: 4px;
+  }
+}
