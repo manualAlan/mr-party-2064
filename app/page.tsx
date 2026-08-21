@@ -9,7 +9,6 @@ export default function Home() {
       <main>
         <section className="hero">
           <div className="hero-copy wrap">
-            <p className="eyebrow light">THE MODERATE REFORM PLAN</p>
             <h1>Make room<br />for tomorrow.</h1>
             <p className="hero-dek">A confident Caprica: easier to build in, safer to live in, and ready to lead in Columbia.</p>
             <div className="button-row">
