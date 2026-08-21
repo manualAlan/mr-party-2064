@@ -2830,11 +2830,18 @@ body:after {
 .portrait-card:after {
   content: "ID / VERIFIED";
   position: absolute;
-  right: 9px;
-  bottom: 12px;
+  z-index: 5;
+  right: 16px;
+  top: 16px;
+  bottom: auto;
+  padding: 6px 8px;
+  background: rgba(2,11,18,.78);
+  border: 1px solid rgba(53,185,255,.38);
   font-size: 6px;
   letter-spacing: .16em;
-  color: rgba(234,255,82,.52);
+  color: var(--acid);
+  box-shadow: 0 0 14px rgba(15,132,247,.16);
+  pointer-events: none;
 }
 .manifesto-row:before {
   content: "";
