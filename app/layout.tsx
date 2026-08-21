@@ -7,4 +7,4 @@ export const metadata: Metadata = {
   icons: { icon: "/images/mr-logo.png", shortcut: "/images/mr-logo.png" },
 };
 
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><div className="cyber-atmosphere" aria-hidden="true"><span>MR NETWORK / CAPRICA</span><i></i><b>2064</b></div>{children}</body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
