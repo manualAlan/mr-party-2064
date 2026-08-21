@@ -3451,6 +3451,10 @@ body:after {
     padding-inline: 4px;
   }
 }
+.portrait-card:after {
+  content: none !important;
+  display: none !important;
+}
 :root {
   --blue: #0f84f7;
   --deep: #031d31;

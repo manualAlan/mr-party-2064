@@ -2,6 +2,7 @@ import { cp, mkdir, rm, writeFile } from "node:fs/promises";
 
 const origin = "http://localhost:3000";
 const base = "/mr-party-2064/";
+const assetVersion = "20260821d";
 const routes = ["", "platform", "team", "events"];
 
 await rm("docs", { recursive: true, force: true });
@@ -15,7 +16,7 @@ for (const route of routes) {
   html = html
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<link\b[^>]*rel="modulepreload"[^>]*>/gi, "")
-    .replace(/href="\/app\/globals\.css"[^>]*>/g, 'href="/assets/site.css">')
+    .replace(/href="\/app\/globals\.css"[^>]*>/g, `href="/assets/site.css?v=${assetVersion}">`)
     .replace(/(href|src)="\/(?!\/)/g, `$1="${base}`)
     .replace("</body>", `<script src="${base}assets/site.js" defer></script></body>`);
   const directory = route ? `docs/${route}` : "docs";
