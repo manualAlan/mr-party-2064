@@ -12,6 +12,7 @@ export function Header() {
   return <header className="site-header">
     <div className="header-inner wrap">
       <Link className="brand" href="/" aria-label="Moderate Reform home"><img src="/images/mr-logo.png" alt="Moderate Reform" /></Link>
+      <div className="system-status" aria-hidden="true"><i></i><span>CAPRICA NETWORK</span><strong>ONLINE</strong></div>
       <nav className={open?'nav open':'nav'} aria-label="Main navigation">
         {links.map(([href,label])=><Link className={path===href?'active':''} href={href} key={href} onClick={()=>setOpen(false)}>{label}</Link>)}
         <Link className="nav-cta" href="/events#volunteer" onClick={()=>setOpen(false)}>Get involved <ArrowIcon /></Link>

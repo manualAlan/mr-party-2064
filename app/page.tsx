@@ -22,6 +22,7 @@ export default function Home() {
             <div className="candidate-tag"><span>Alan Bluespan III</span><strong>For Vice President</strong></div>
           </div>
           <div className="hero-mark">MR</div>
+          <div className="hero-hud" aria-hidden="true"><span>LAT 32.704</span><span>LONG 117.161</span><i></i><strong>FORWARD VECTOR</strong></div>
         </section>
 
         <section className="campaign-rail" aria-label="Campaign signal">
