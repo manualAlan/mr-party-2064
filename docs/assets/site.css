@@ -214,6 +214,9 @@
   .table {
     display: table;
   }
+  .grow {
+    flex-grow: 1;
+  }
 }
 :root {
   --blue: #1239f5;
@@ -2524,12 +2527,9 @@ body {
   grid-template-columns: repeat(12,1fr);
   gap: 24px 18px;
 }
-.portrait-card {
+.portrait-card,.portrait-card:nth-child(n+5) {
   grid-column: span 3;
   min-width: 0;
-}
-.portrait-card:nth-child(n+5) {
-  grid-column: span 4;
 }
 .portrait-img {
   height: auto;

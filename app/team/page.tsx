@@ -3,7 +3,7 @@ import { candidates } from "../data";
 import Link from "next/link";
 
 export default function Team(){return <><Header/><main>
- <section className="page-hero team-hero"><div className="wrap"><p className="eyebrow light">THE MR TEAM</p><h1>Rooted locally.<br/>Ready nationally.</h1><p>Seven candidates, each with a plan shaped by the place they call home.</p></div></section>
+ <section className="page-hero team-hero"><div className="wrap"><p className="eyebrow light">THE MR TEAM</p><h1>Rooted locally.<br/>Ready nationally.</h1><p>Eight candidates, each with a plan shaped by the place they call home.</p></div></section>
  <section className="candidate-list wrap section-pad">
   {candidates.map((c,i)=><article className="candidate-profile" id={c.slug} key={c.name}>
    <div className="profile-image"><img src={c.image} alt={c.name}/><span>0{i+1}</span></div>
