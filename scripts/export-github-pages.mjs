@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (form.classList.contains('register-form')) {
       form.innerHTML = '<div class="form-success"><span>YOU’RE ON THE LIST</span><h3>See you there.</h3><p>Your place has been reserved in this campaign preview.</p></div>';
     } else if (form.classList.contains('volunteer-form')) {
-      form.innerHTML = '<div class="form-success compact-success"><span>WELCOME TO THE TEAM</span><h3>You’re in.</h3><p>Your local MR organiser would follow up from the live campaign system.</p></div>';
+      form.innerHTML = '<div class="form-success compact-success"><span>WELCOME TO THE TEAM</span><h3>You’re in.</h3><p>Your local LCA organiser would follow up from the live campaign system.</p></div>';
     } else {
       form.innerHTML = '<strong>SUBSCRIBED</strong><span>The next field bulletin would land in your inbox.</span>';
     }

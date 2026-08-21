@@ -40,7 +40,7 @@ export function EventPageNavigator(){
 
 export function VolunteerForm(){
  const [sent,setSent]=useState(false);
- if(sent) return <div className="form-success compact-success"><span>WELCOME TO THE TEAM</span><h3>You’re in.</h3><p>Your local MR organiser would follow up from the live campaign system.</p><button type="button" onClick={()=>setSent(false)}>Start over</button></div>;
+ if(sent) return <div className="form-success compact-success"><span>WELCOME TO THE TEAM</span><h3>You’re in.</h3><p>Your local LCA organiser would follow up from the live campaign system.</p><button type="button" onClick={()=>setSent(false)}>Start over</button></div>;
  const regions=["Chasmia","Carnapol","Kalahooska","Moeras","Pleucadeuc","Ambarino","Kazana","Ambrosia","Reno","Montiablo","Cambria","Oplana","Myrati","Pittston","Mezata","Costa Blanca","Ventura"];
  return <form className="volunteer-form" onSubmit={(e)=>{e.preventDefault();setSent(true)}}><label>Full name<input required type="text" placeholder="Your name"/></label><label>Email address<input required type="email" placeholder="you@example.ca"/></label><label>Home region<select required defaultValue=""><option value="" disabled>Select your region</option>{regions.map(region=><option key={region}>{region}</option>)}</select></label><button className="button button-white" type="submit">Count me in <ArrowIcon/></button><small>No data leaves this local preview.</small></form>
 }

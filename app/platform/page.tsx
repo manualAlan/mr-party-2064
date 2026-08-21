@@ -3,12 +3,13 @@ import { priorities } from "../data";
 import Link from "next/link";
 
 export default function Platform(){return <><Header/><main>
-  <section className="page-hero plan-hero"><div className="wrap"><p className="eyebrow light">THE MODERATE REFORM PLAN</p><h1>Freedom to build.<br/>Confidence to lead.</h1><p>Serious reforms, explained plainly. A government focused on the foundations of a good life, and confident enough to let Capricans do the rest.</p></div></section>
+  <section className="page-hero plan-hero"><div className="wrap"><p className="eyebrow light">THE LCA COMMON PROGRAMME</p><h1>Three parties.<br/>One way forward.</h1><p>A shared programme for stable government, stronger communities and a Caprica confident enough to build its future.</p></div></section>
+  <section className="alliance-intro wrap section-pad" id="alliance"><p className="eyebrow">THE ALLIANCE</p><h2>Agreement where it matters.</h2><div><p className="lead">LCA unites three distinct political traditions behind one programme for the 2064 election.</p><p>We will govern from common ground, protect constitutional democracy, reward work and enterprise, deliver dependable public services, and give every region a genuine stake in national progress. Our parties retain their identities. Our candidates share one commitment, a capable, open and forward-looking Caprica.</p></div></section>
   <nav className="jump-nav wrap" aria-label="Platform sections">{priorities.map((p,i)=><a href={`#${p.slug}`} key={p.slug}><span>{String(i+1).padStart(2,'0')}</span>{p.title}</a>)}</nav>
   <section className="manifesto wrap section-pad">
    {priorities.map((p,i)=><article className="manifesto-row" id={p.slug} key={p.slug}>
     <div className="manifesto-num">{String(i+1).padStart(2,'0')}</div><div className="manifesto-title"><p className="eyebrow">{p.kicker}</p><h2>{p.headline}</h2><figure><img src={p.image} alt="" /></figure></div>
-    <div className="manifesto-text"><p className="lead">{p.short}</p><p>{p.detail}</p><h3>MR will</h3><ul>{p.commitments.map(x=><li key={x}>{x}</li>)}</ul></div>
+    <div className="manifesto-text"><p className="lead">{p.short}</p><p>{p.detail}</p><h3>LCA will</h3><ul>{p.commitments.map(x=><li key={x}>{x}</li>)}</ul></div>
    </article>)}
   </section>
   <section className="first-hundred">
@@ -20,6 +21,6 @@ export default function Platform(){return <><Header/><main>
     <figure><img src="/images/city.jpg" alt="People looking across a modern waterfront city"/><figcaption>Unlock homes and opportunity</figcaption></figure>
     <figure><img src="/images/rail.jpg" alt="A train crossing a bridge through the mountains"/><figcaption>Connect every region</figcaption></figure>
   </section>
-  <section className="contrast wrap section-pad"><p className="eyebrow">A BETTER BALANCE</p><h2>Strong public purpose.<br/>Open Caprican enterprise.</h2><div><p>Our opponents ask government to own more, direct more and tax more. We believe government should set fair rules, protect the vulnerable and deliver the essentials well.</p><p>Then it should trust people, communities and businesses to create the growth that pays for lasting public services.</p></div></section>
+  <section className="contrast wrap section-pad"><p className="eyebrow">THE ALLIANCE COMMITMENT</p><h2>Strong public purpose.<br/>Open Caprican enterprise.</h2><div><p>Our three parties agree that government should set fair rules, protect the vulnerable and deliver the essentials well.</p><p>Then it should trust people, communities and businesses to create the growth that pays for lasting public services.</p></div></section>
   <section className="page-cta"><div className="wrap"><h2>Ready to help?</h2><Link className="button button-white" href="/events#volunteer">Join the campaign <ArrowIcon/></Link></div></section>
  </main><Footer/></>}

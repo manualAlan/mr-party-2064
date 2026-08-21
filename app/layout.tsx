@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Moderate Reform | Make Room for Tomorrow",
-  description: "The Moderate Reform plan for a freer, safer and more confident Caprica.",
-  icons: { icon: "/images/mr-logo.png", shortcut: "/images/mr-logo.png" },
+  title: "LCA | Make Room for Tomorrow",
+  description: "The LCA alliance programme for a freer, safer and more confident Caprica.",
+  icons: { icon: "/images/lca-logo.svg", shortcut: "/images/lca-logo.svg" },
 };
 
 export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}

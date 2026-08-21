@@ -1,10 +1,10 @@
-# Moderate Reform, 2064
+# LCA Alliance, 2064
 
-Official campaign website concept for the Moderate Reform Party in the fictional Republic of Caprica.
+Official campaign website for the LCA three-party electoral alliance in the fictional Republic of Caprica.
 
 ## Live site
 
-[View the 2064 MR campaign](https://manualalan.github.io/mr-party-2064/)
+[View the 2064 LCA campaign](https://manualalan.github.io/mr-party-2064/)
 
 ## Local development
 
@@ -19,4 +19,4 @@ The application is built with React and vinext. A Pages-safe static edition is g
 npm run export:pages
 ```
 
-Campaign portraits and the MR logo were supplied for this project. Supporting policy photography is stored locally with the site.
+Campaign portraits and the LCA logo were supplied for this project. Supporting policy photography is stored locally with the site.

@@ -13,25 +13,25 @@ export default function Home() {
             <p className="hero-dek">A confident Caprica: easier to build in, safer to live in, and ready to lead in Columbia.</p>
             <div className="button-row">
               <Link className="button button-white" href="/platform">Explore our plan <ArrowIcon /></Link>
-              <Link className="text-link light-link" href="/team">Meet the MR team <ArrowIcon /></Link>
+              <Link className="text-link light-link" href="/team">Meet the LCA team <ArrowIcon /></Link>
             </div>
           </div>
           <div className="hero-portrait">
-            <img src="/images/alan.png" alt="Alan Bluespan III, MR candidate for Vice President" />
+            <img src="/images/alan.png" alt="Alan Bluespan III, LCA candidate for Vice President" />
             <div className="candidate-tag"><span>Alan Bluespan III</span><strong>For Vice President</strong></div>
           </div>
-          <div className="hero-mark">MR</div>
+          <div className="hero-mark">LCA</div>
           <div className="hero-hud" aria-hidden="true"><span>LAT 32.704</span><span>LONG 117.161</span><i></i><strong>FORWARD VECTOR</strong></div>
         </section>
 
         <section className="campaign-rail" aria-label="Campaign signal">
-          <div className="wrap"><span>MR / NATIONAL CAMPAIGN</span><strong>Freedom to build</strong><i></i><strong>Confidence to lead</strong><em>LIVE SIGNAL 2064</em></div>
+          <div className="wrap"><span>LCA / ALLIANCE CAMPAIGN</span><strong>Three parties</strong><i></i><strong>One way forward</strong><em>LIVE SIGNAL 2064</em></div>
         </section>
 
         <section className="signal-panel wrap">
           <div className="signal-word">MOVE</div>
-          <div className="signal-copy"><span>THE MR DIFFERENCE</span><h2>Less theatre.<br/>More velocity.</h2><p>Government should be a launchpad, not a waiting room. We will clear the obstacles, protect the rules and let Caprica move.</p></div>
-          <div className="signal-orbit" aria-hidden="true"><i></i><b>MR</b></div>
+          <div className="signal-copy"><span>THE LCA AGREEMENT</span><h2>Different roots.<br/>Shared direction.</h2><p>Three parties have chosen common purpose over old dividing lines. Together, we will clear the obstacles, protect the rules and let Caprica move.</p></div>
+          <div className="signal-orbit" aria-hidden="true"><i></i><b>LCA</b></div>
         </section>
 
         <section className="intro wrap section-pad">
@@ -40,8 +40,8 @@ export default function Home() {
             <h2>Caprica works best<br />when Capricans can.</h2>
           </div>
           <div className="intro-copy">
-            <p className="lead">Politics has spent too long choosing between a state that does everything and a state that does nothing. MR chooses what works.</p>
-            <p>We will protect the institutions that keep us free, unlock private initiative, and make sure every region can share in Caprica’s next chapter.</p>
+            <p className="lead">LCA brings three parties together around a practical programme for government, built on what works and focused on what Capricans share.</p>
+            <p>Our alliance will protect the institutions that keep us free, unlock private initiative, and make sure every region can share in Caprica’s next chapter.</p>
             <Link className="text-link" href="/platform">Read the full platform <ArrowIcon /></Link>
           </div>
         </section>
@@ -78,7 +78,7 @@ export default function Home() {
 
         <section className="team-preview wrap section-pad">
           <div className="section-head">
-            <div><p className="eyebrow">YOUR MR TEAM</p><h2>Local voices.<br />National purpose.</h2></div>
+            <div><p className="eyebrow">YOUR LCA TEAM</p><h2>Local voices.<br />Shared purpose.</h2></div>
             <Link className="text-link" href="/team">Meet every candidate <ArrowIcon /></Link>
           </div>
           <div className="portrait-strip">
