@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "LCA | Make Room for Tomorrow",
-  description: "The LCA alliance programme for a freer, safer and more confident Caprica.",
+  description: "The LCA alliance program for a freer, safer and more confident Caprica.",
   icons: { icon: "/images/lca-logo.svg", shortcut: "/images/lca-logo.svg" },
 };
 

@@ -8,6 +8,8 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -203,14 +205,29 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
+  .absolute {
+    position: absolute;
+  }
   .static {
     position: static;
   }
   .start {
     inset-inline-start: var(--spacing);
   }
+  .end {
+    inset-inline-end: var(--spacing);
+  }
+  .block {
+    display: block;
+  }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
@@ -221,8 +238,17 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
 }
 :root {
@@ -3701,6 +3727,68 @@ body {
     gap: 18px 10px;
   }
 }
+.plan-hero .page-hero-description {
+  font-size: 20px;
+  color: #d8ddff;
+  max-width: 650px;
+  margin-bottom: 0;
+}
+.manifesto-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 42px;
+  min-width: 255px;
+  margin-top: 30px;
+  padding: 17px 20px;
+  border: 1px solid var(--acid);
+  background: linear-gradient(110deg,rgba(100,255,157,.1),rgba(53,185,255,.08));
+  color: var(--acid);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  line-height: 1;
+  box-shadow: 8px 8px 0 rgba(15,132,247,.34),0 0 28px rgba(100,255,157,.08);
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s,background-color .2s,color .2s,box-shadow .2s;
+}
+.manifesto-download:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-120%) skewX(-25deg);
+  background: linear-gradient(90deg,transparent,rgba(255,255,255,.62),transparent);
+  transition: transform .55s;
+}
+.manifesto-download:hover,.manifesto-download:focus-visible {
+  background: var(--acid);
+  color: var(--night);
+  transform: translateY(-2px);
+  box-shadow: 11px 11px 0 rgba(15,132,247,.52),0 0 36px rgba(100,255,157,.22);
+}
+.manifesto-download:hover:before,.manifesto-download:focus-visible:before {
+  transform: translateX(120%) skewX(-25deg);
+}
+.manifesto-download:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+.manifesto-download .arrow {
+  font-size: 18px;
+}
+@media (max-width:600px) {
+  .plan-hero .page-hero-description {
+    font-size: 18px;
+    max-width: 94%;
+  }
+  .manifesto-download {
+    margin-top: 24px;
+    min-width: 240px;
+    padding: 16px 18px;
+    gap: 28px;
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -3720,6 +3808,11 @@ body {
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-blur {
   syntax: "*";
@@ -3782,6 +3875,7 @@ body {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

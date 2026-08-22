@@ -2,12 +2,13 @@ import { cp, mkdir, rm, writeFile } from "node:fs/promises";
 
 const origin = "http://localhost:3000";
 const base = "/mr-party-2064/";
-const assetVersion = "20260821d";
+const assetVersion = "20260822a";
 const routes = ["", "platform", "team", "events"];
 
 await rm("docs", { recursive: true, force: true });
 await mkdir("docs/assets", { recursive: true });
 await cp("public/images", "docs/images", { recursive: true });
+await cp("public/manifesto", "docs/manifesto", { recursive: true });
 
 for (const route of routes) {
   const response = await fetch(`${origin}/${route}`);
@@ -18,7 +19,7 @@ for (const route of routes) {
     .replace(/<link\b[^>]*rel="modulepreload"[^>]*>/gi, "")
     .replace(/href="\/app\/globals\.css"[^>]*>/g, `href="/assets/site.css?v=${assetVersion}">`)
     .replace(/(href|src)="\/(?!\/)/g, `$1="${base}`)
-    .replace("</body>", `<script src="${base}assets/site.js" defer></script></body>`);
+    .replace("</body>", `<script src="${base}assets/site.js?v=${assetVersion}" defer></script></body>`);
   const directory = route ? `docs/${route}` : "docs";
   await mkdir(directory, { recursive: true });
   await writeFile(`${directory}/index.html`, html);
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (form.classList.contains('register-form')) {
       form.innerHTML = '<div class="form-success"><span>YOU’RE ON THE LIST</span><h3>See you there.</h3><p>Your place has been reserved in this campaign preview.</p></div>';
     } else if (form.classList.contains('volunteer-form')) {
-      form.innerHTML = '<div class="form-success compact-success"><span>WELCOME TO THE TEAM</span><h3>You’re in.</h3><p>Your local LCA organiser would follow up from the live campaign system.</p></div>';
+      form.innerHTML = '<div class="form-success compact-success"><span>WELCOME TO THE TEAM</span><h3>You’re in.</h3><p>Your local LCA organizer would follow up from the live campaign system.</p></div>';
     } else {
       form.innerHTML = '<strong>SUBSCRIBED</strong><span>The next field bulletin would land in your inbox.</span>';
     }

@@ -40,7 +40,7 @@ export default function Home() {
             <h2>Caprica works best<br />when Capricans can.</h2>
           </div>
           <div className="intro-copy">
-            <p className="lead">LCA brings three parties together around a practical programme for government, built on what works and focused on what Capricans share.</p>
+            <p className="lead">LCA brings three parties together around a practical program for government, built on what works and focused on what Capricans share.</p>
             <p>Our alliance will protect the institutions that keep us free, unlock private initiative, and make sure every region can share in Caprica’s next chapter.</p>
             <Link className="text-link" href="/platform">Read the full platform <ArrowIcon /></Link>
           </div>
