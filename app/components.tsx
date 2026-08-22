@@ -8,7 +8,12 @@ export function ArrowIcon() { return <span className="arrow" aria-hidden="true">
 export function Header() {
   const [open,setOpen]=useState(false);
   const path=usePathname();
-  const links=[['/platform','Our plan'],['/team','Candidates'],['/events','Events']];
+  const links=[
+    ['https://manualalan.github.io/mr-party-2064/manifesto/caprica-new-future-2064.pdf','Manifesto'],
+    ['/platform','Our plan'],
+    ['/team','Candidates'],
+    ['/events','Events'],
+  ];
   return <header className="site-header">
     <div className="header-inner wrap">
       <Link className="brand" href="/" aria-label="LCA alliance home"><img src="/images/lca-logo.svg" alt="LCA" /></Link>
